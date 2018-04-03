@@ -1,0 +1,18 @@
+<!-- <%= render 'form', article: @article %> -->
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>
+<div>
+    <h1>Editing Article</h1>
+    <div id="id-editor-article-show">
+        <%= form_for(@article) do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+
+        <%= f.label :body %>
+        <%= f.kindeditor :body%>
+        <%= f.submit "添加文章", class: "btn btn-primary" %>
+    <% end %>
+</div>
+<%= link_to 'Back', articles_path %>
+</div>
