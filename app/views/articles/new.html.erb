@@ -1,15 +1,19 @@
 <div>
     <h1>New Article</h1>
     <div id="id-editor-article-show">
-        <%= form_for(@article) do |f| %>
+        <%= form_for(@article, multipart:true) do |f| %>
             <%= f.label :title %>
-            <%= f.text_field :title, class: 'form-control' %>
+            <%= f.text_field :title %>
 
-            <%= f.label :title %>
-            <%=file_field_tag "pic_path[]"%>
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+
+            <%= f.label :image %>
+            <%= f.file_field :image %>
 
             <%= f.label :body %>
             <%= f.kindeditor :body%>
+
             <%= f.submit "添加文章", class: "btn btn-primary" %>
         <% end %>
     </div>

@@ -6,8 +6,21 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @article.image.url || ''%>
+</p>
+
+<p>
   <strong>Body:</strong>
-  <%== @article.body %>
+  <div class="articleShowBody">
+      <%== @article.body %>
+  </div>
 </p>
 
 

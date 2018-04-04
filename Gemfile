@@ -15,6 +15,7 @@ gem 'will_paginate', '3.1.6'
 gem 'rails_kindeditor'
 gem 'json'
 gem 'rack-cors', require: 'rack/cors'
+gem 'carrierwave', '~> 1.0'
 
 
 group :development, :test do
