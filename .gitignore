@@ -23,4 +23,6 @@
 .byebug_history
 
 todo
-.gitignore
+/public/uploads/*
+/public/assets/*
+
