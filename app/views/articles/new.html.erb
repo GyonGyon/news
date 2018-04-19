@@ -1,21 +1,24 @@
 <div>
-    <h1>New Article</h1>
-    <div id="id-editor-article-show">
-        <%= form_for(@article, multipart:true) do |f| %>
-            <%= f.label :title %>
-            <%= f.text_field :title %>
+  <h1>New Article</h1>
+  <div id="id-editor-article-show">
+    <%= form_for(@article, multipart: true) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
 
-            <%= f.label :description %>
-            <%= f.text_area :description %>
+      <%= f.label :time %>
+      <%= f.date_field :time, value: Time.new.strftime("%Y-%m-%d")%>
 
-            <%= f.label :image %>
-            <%= f.file_field :image %>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
 
-            <%= f.label :body %>
-            <%= f.kindeditor :body%>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
 
-            <%= f.submit "添加文章", class: "btn btn-primary" %>
-        <% end %>
-    </div>
-    <%= link_to 'Back', articles_path %>
+      <%= f.label :body %>
+      <%= f.kindeditor :body %>
+
+      <%= f.submit "添加文章", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <%= link_to 'Back', articles_path %>
 </div>
