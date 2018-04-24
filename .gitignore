@@ -26,4 +26,5 @@ todo
 /public/uploads/*
 /public/assets/*
 /config/email.yml
+/config/puma.rb
 
